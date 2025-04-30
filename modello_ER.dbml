@@ -1,0 +1,52 @@
+-- modello_ER.dbml (dbdiagram.io)
+
+Table Aeroporto {
+  id_aeroporto int [pk, increment]
+  nome varchar
+  codice_IATA char(3)
+  città varchar
+  nazione varchar
+}
+
+Table Tratta {
+  id_tratta int [pk, increment]
+  aeroporto_partenza int [ref: > Aeroporto.id_aeroporto]
+  aeroporto_arrivo int [ref: > Aeroporto.id_aeroporto]
+  durata_minuti int
+  distanza_km int
+}
+
+Table Volo {
+  id_volo int [pk, increment]
+  numero_volo varchar
+  id_tratta int [ref: > Tratta.id_tratta]
+  data_partenza date
+  ora_partenza time
+  stato varchar
+}
+
+Table Passeggero {
+  id_passeggero int [pk, increment]
+  nome varchar
+  cognome varchar
+  email varchar
+  telefono varchar
+  documento_identita varchar
+}
+
+Table Prenotazione {
+  id_prenotazione int [pk, increment]
+  id_passeggero int [ref: > Passeggero.id_passeggero]
+  id_volo int [ref: > Volo.id_volo]
+  data_prenotazione date
+  stato varchar
+}
+
+Table Biglietto {
+  id_biglietto int [pk, increment]
+  id_prenotazione int [ref: > Prenotazione.id_prenotazione]
+  id_volo int [ref: > Volo.id_volo]
+  prezzo decimal
+  stato varchar
+  qr_code varchar
+}
