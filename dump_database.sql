@@ -1,43 +1,43 @@
 -- dump_database.sql
 
 -- Aeroporti
-INSERT INTO Aeroporto (nome, codice_IATA, città, nazione) VALUES
-('Milano Malpensa', 'MXP', 'Milano', 'Italia'),
-('Roma Fiumicino', 'FCO', 'Roma', 'Italia'),
-('Venezia Marco Polo', 'VCE', 'Venezia', 'Italia'),
-('Napoli Capodichino', 'NAP', 'Napoli', 'Italia'),
-('Palermo Punta Raisi', 'PMO', 'Palermo', 'Italia'),
-('Bologna Guglielmo Marconi', 'BLQ', 'Bologna', 'Italia'),
-('Catania Fontanarossa', 'CTA', 'Catania', 'Italia'),
-('Torino Caselle', 'TRN', 'Torino', 'Italia'),
-('Lamezia Terme', 'SUF', 'Lamezia Terme', 'Italia'),
-('Bari Karol Wojtyla', 'BRI', 'Bari', 'Italia');
+INSERT INTO Aeroporto (id_aeroporto, nome, città, paese, codice_IATA) VALUES
+(10000, 'Milano Malpensa', 'Milano', 'Italy', 'MXP'),
+(10001, 'Roma Fiumicino', 'Roma', 'Italy', 'FCO'),
+(10002, 'Bari Karol Wojtyla', 'Bari', 'Italy', 'BRI'),
+(10003, 'Venezia Marco Polo', 'Venezia', 'Italy', 'VCE'),
+(10004, 'Napoli Capodichino', 'Napoli', 'Italy', 'NAP'),
+(10005, 'London Heathrow', 'London', 'United Kingdom', 'LHR'),
+(10006, 'Paris Charles de Gaulle', 'Paris', 'France', 'CDG'),
+(10007, 'Berlin Brandenburg', 'Berlin', 'Germany', 'BER'),
+(10008, 'Tokyo Haneda', 'Tokyo', 'Japan', 'HND'),
+(10009, 'Bangkok Suvarnabuhmi', 'Bangkok', 'Thailand', 'BKK');
 
 -- Tratte
-INSERT INTO Tratta (aeroporto_partenza, aeroporto_arrivo, durata_minuti, distanza_km) VALUES
-(1, 2, 75, 570),
-(2, 3, 60, 410),
-(3, 4, 90, 660),
-(4, 5, 70, 490),
-(5, 6, 80, 510),
-(6, 7, 85, 520),
-(7, 8, 75, 470),
-(8, 9, 65, 430),
-(9, 10, 95, 620),
-(10, 1, 100, 700);
+INSERT INTO Tratta (id_tratta, aeroporto_partenza, aeroporto_arrivo, durata_minuti) VALUES
+(20000, 10000, 10008, 12:39:00),
+(20001, 10001, 10009, 10:50:00),
+(20002, 10002, 10003, 01:25:00),
+(20003, 10004, 10006, 02:20:00),
+(20004, 10004, 10005, 02:31:00),
+(20005, 10000, 10007, 01:33:00),
+(20006, 10008, 10009, 05:36:00),
+(20007, 10006, 10008, 18:01:00),
+(20008, 10002, 10005, 02:57:00),
+(20009, 10009, 10007, 11:17:00);
 
 -- Voli
-INSERT INTO Volo (numero_volo, id_tratta, data_partenza, ora_partenza, stato) VALUES
-('AZ101', 1, '2025-06-15', '10:00:00', 'Attivo'),
-('AZ102', 2, '2025-06-16', '11:00:00', 'Attivo'),
-('AZ103', 3, '2025-06-17', '12:00:00', 'Attivo'),
-('AZ104', 4, '2025-06-18', '13:00:00', 'Attivo'),
-('AZ105', 5, '2025-06-19', '14:00:00', 'Attivo'),
-('AZ106', 6, '2025-06-20', '15:00:00', 'Attivo'),
-('AZ107', 7, '2025-06-21', '16:00:00', 'Attivo'),
-('AZ108', 8, '2025-06-22', '17:00:00', 'Attivo'),
-('AZ109', 9, '2025-06-23', '18:00:00', 'Attivo'),
-('AZ110', 10, '2025-06-24', '19:00:00', 'Attivo');
+INSERT INTO Volo (id_volo, id_tratta, data_partenza, ora_partenza, numero_volo, stato) VALUES
+('AZ101', 1, '2025-06-15', '10:00:00', 'programmato'),
+('AZ102', 2, '2025-06-16', '11:00:00', 'programmato'),
+('AZ103', 3, '2025-06-17', '12:00:00', 'completato'),
+('AZ104', 4, '2025-06-18', '13:00:00', 'cancellato'),
+('AZ105', 5, '2025-06-19', '14:00:00', 'programmato'),
+('AZ106', 6, '2025-06-20', '15:00:00', 'completato'),
+('AZ107', 7, '2025-06-21', '16:00:00', 'programmato'),
+('AZ108', 8, '2025-06-22', '17:00:00', 'cancellato'),
+('AZ109', 9, '2025-06-23', '18:00:00', 'programmato'),
+('AZ110', 10, '2025-06-24', '19:00:00', 'programmato');
 
 -- Passeggeri
 INSERT INTO Passeggero (nome, cognome, email, telefono, documento_identita) VALUES
