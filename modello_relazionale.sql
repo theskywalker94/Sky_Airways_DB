@@ -3,25 +3,24 @@
 CREATE TABLE Aeroporto (
   id_aeroporto SERIAL PRIMARY KEY,
   nome VARCHAR(100),
-  codice_IATA CHAR(3) UNIQUE,
-  città VARCHAR(100),
-  nazione VARCHAR(100)
+  citta VARCHAR(100),
+  paese VARCHAR(100),
+  codice_IATA CHAR(3) UNIQUE
 );
 
 CREATE TABLE Tratta (
   id_tratta SERIAL PRIMARY KEY,
   aeroporto_partenza INT REFERENCES Aeroporto(id_aeroporto),
   aeroporto_arrivo INT REFERENCES Aeroporto(id_aeroporto),
-  durata_minuti INT,
-  distanza_km INT
+  durata_minuti INT -- correggere tipo
 );
 
 CREATE TABLE Volo (
   id_volo SERIAL PRIMARY KEY,
-  numero_volo VARCHAR(20),
   id_tratta INT REFERENCES Tratta(id_tratta),
   data_partenza DATE,
   ora_partenza TIME,
+  numero_volo VARCHAR(10),
   stato VARCHAR(50)
 );
 
@@ -36,17 +35,19 @@ CREATE TABLE Passeggero (
 
 CREATE TABLE Prenotazione (
   id_prenotazione SERIAL PRIMARY KEY,
-  id_passeggero INT REFERENCES Passeggero(id_passeggero),
-  id_volo INT REFERENCES Volo(id_volo),
   data_prenotazione DATE,
-  stato VARCHAR(50)
+  metodo_pagamento VARCHAR(50),
+  totale_pagato DECIMAL(10,2),
+  id_passeggero INT REFERENCES Passeggero(id_passeggero)
 );
 
 CREATE TABLE Biglietto (
   id_biglietto SERIAL PRIMARY KEY,
   id_prenotazione INT REFERENCES Prenotazione(id_prenotazione),
   id_volo INT REFERENCES Volo(id_volo),
-  prezzo DECIMAL(8,2),
-  stato VARCHAR(50),
-  qr_code VARCHAR(100)
+  classe VARCHAR(20),
+  posto VARCHAR(5),
+  check_in_effettuato BOOLEAN,
+  qr_code TEXT, -- oppure VARCHAR?
+  stato VARCHAR(20)
 );
