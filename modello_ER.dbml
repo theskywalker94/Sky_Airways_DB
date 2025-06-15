@@ -3,25 +3,24 @@
 Table Aeroporto {
   id_aeroporto int [pk, increment]
   nome varchar
-  codice_IATA char(3)
   città varchar
-  nazione varchar
+  paese varchar
+  codice_IATA char(3)
 }
 
 Table Tratta {
   id_tratta int [pk, increment]
   aeroporto_partenza int [ref: > Aeroporto.id_aeroporto]
   aeroporto_arrivo int [ref: > Aeroporto.id_aeroporto]
-  durata_minuti int
-  distanza_km int
+  durata_prevista time
 }
 
 Table Volo {
   id_volo int [pk, increment]
-  numero_volo varchar
   id_tratta int [ref: > Tratta.id_tratta]
   data_partenza date
   ora_partenza time
+  numero_volo varchar
   stato varchar
 }
 
@@ -31,22 +30,26 @@ Table Passeggero {
   cognome varchar
   email varchar
   telefono varchar
-  documento_identita varchar
+  documento_identità varchar
 }
 
 Table Prenotazione {
   id_prenotazione int [pk, increment]
-  id_passeggero int [ref: > Passeggero.id_passeggero]
-  id_volo int [ref: > Volo.id_volo]
+  id_volo int [ref: > Volo.id_volo] // correggere tutte le altre tavole e file word
   data_prenotazione date
-  stato varchar
+  metodo_pagamento varchar
+  totale_pagato decimal
+  id_passeggero int [ref: > Passeggero.id_passeggero]
 }
 
 Table Biglietto {
   id_biglietto int [pk, increment]
   id_prenotazione int [ref: > Prenotazione.id_prenotazione]
   id_volo int [ref: > Volo.id_volo]
-  prezzo decimal
-  stato varchar
+  classe varchar
+  posto varchar
+  check_in_effettuato boolean
+  prezzo decimal // correggere tutte le altre tavole e file word
   qr_code varchar
+  stato varchar
 }
