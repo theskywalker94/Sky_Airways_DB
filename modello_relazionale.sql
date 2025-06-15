@@ -12,7 +12,7 @@ CREATE TABLE Tratta (
   id_tratta SERIAL PRIMARY KEY,
   aeroporto_partenza INT REFERENCES Aeroporto(id_aeroporto),
   aeroporto_arrivo INT REFERENCES Aeroporto(id_aeroporto),
-  durata_minuti INT NOT NULL -- correggere tipo
+  durata_prevista TIME NOT NULL
 );
 
 CREATE TABLE Volo (
@@ -48,7 +48,7 @@ CREATE TABLE Biglietto (
   classe VARCHAR(20) CHECK (classe IN ('economy', 'business')),
   posto VARCHAR(5) NOT NULL,
   check_in_effettuato BOOLEAN DEFAULT FALSE,
-  -- prezzo DECIMAL (10,2),
+  prezzo DECIMAL (10,2) NOT NULL,
   qr_code VARCHAR(20) UNIQUE,
   stato VARCHAR(20) CHECK (stato IN ('valido', 'annullato', 'utilizzato'))
 );
