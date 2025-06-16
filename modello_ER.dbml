@@ -35,10 +35,8 @@ Table Passeggero {
 
 Table Prenotazione {
   id_prenotazione int [pk, increment]
-  id_volo int [ref: > Volo.id_volo] // correggere tutte le altre tavole e file word
   data_prenotazione date
   metodo_pagamento varchar
-  totale_pagato decimal
   id_passeggero int [ref: > Passeggero.id_passeggero]
 }
 
@@ -49,7 +47,7 @@ Table Biglietto {
   classe varchar
   posto varchar
   check_in_effettuato boolean
-  prezzo decimal // correggere tutte le altre tavole e file word
+  prezzo decimal
   qr_code varchar
   stato varchar
 }
