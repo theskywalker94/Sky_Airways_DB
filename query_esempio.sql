@@ -37,5 +37,5 @@ GROUP BY v.numero_volo;
 SELECT v.numero_volo, SUM(b.prezzo) AS totale_incassi
 FROM Biglietto b
 JOIN Volo v ON b.id_volo = v.id_volo
-WHERE v.id_volo = 56789
-  AND b.stato = 'Valido';
+WHERE v.id_volo = 30009
+  AND b.stato = 'valido';
