@@ -1,6 +1,6 @@
 -- query_esempio.sql
 
--- 1. Ricerca voli disponibili -- testare query
+-- 1. Ricerca voli disponibili
 SELECT v.id_volo, v.numero_volo, v.data_partenza, v.ora_partenza, v.stato
 FROM Volo v
 JOIN Tratta t ON v.id_tratta = t.id_tratta
@@ -11,9 +11,10 @@ WHERE a1.codice_IATA = 'MXP' AND a2.codice_IATA = 'HND'
   AND v.stato = 'programmato';
 
 -- 2. Storico prenotazioni
-SELECT p.id_prenotazione, p.data_prenotazione, p.stato, v.numero_volo, v.data_partenza -- modificare da tabella Volo a tabella Biglietto
+SELECT p.id_prenotazione, p.data_prenotazione, p.stato, v.numero_volo, v.data_partenza
 FROM Prenotazione p
-JOIN Volo v ON p.id_volo = v.id_volo
+JOIN Biglietto b ON p.id_prenotazione = b.id_prenotazione
+JOIN Volo v ON b.id_volo = v.id_volo
 WHERE p.id_passeggero = 'ID12345'
 ORDER BY p.data_prenotazione DESC;
 
@@ -32,7 +33,7 @@ LEFT JOIN Biglietto b ON v.id_volo = b.id_volo
 WHERE v.data_partenza = '2025-06-15'
 GROUP BY v.numero_volo;
 
--- 5. Entrate da un volo -- correggere query, ho spostato prezzo su tabella prenotazione
+-- 5. Entrate da un volo
 SELECT v.numero_volo, SUM(b.prezzo) AS totale_incassi
 FROM Biglietto b
 JOIN Volo v ON b.id_volo = v.id_volo
