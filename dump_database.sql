@@ -50,7 +50,7 @@ INSERT INTO Passeggero (id_passeggero, nome, cognome, email, telefono, documento
 (40006, 'Michela', 'Gallo', 'michela.gallo@email.it', '3209329057', 'ID12351'),
 (40007, 'Mariella', 'Ieva', 'mariella.ieva@email.it', '3393952068', 'ID12352'),
 (40008, 'Lisa', 'Holzmann', 'lisa.holzmann@email.it', '0472722401', 'ID12353'),
-(40009, 'Viviana', 'Tenore', 'viviana.tenore@email.it', '3383229695', 'ID12354');
+(40009, 'Viviana', 'Tenore', 'viviana.tenore@email.it', '3383229695', 'ID12354'),
 (40010, 'Carmen', 'Zampol', 'carmen.zampol@email.it', '3331234891', 'ID12355'),
 (40011, 'Rita', 'Gallo', 'rita.gallo@email.it', '3337654234', 'ID12356'),
 (40012, 'Giovanna', 'Squillace', 'giovanna.squillace@email.it', '3339876923', 'ID12357'),
