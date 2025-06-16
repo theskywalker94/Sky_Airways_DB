@@ -64,26 +64,26 @@ INSERT INTO Passeggero (id_passeggero, nome, cognome, email, telefono, documento
 
 -- Prenotazioni
 INSERT INTO Prenotazione (id_prenotazione, data_prenotazione, metodo_pagamento, id_passeggero) VALUES
-(50000, '2024-12-30', 'Credit card', 'ID12345'),
-(50001, '2025-01-12', 'Credit card', 'ID12346'),
-(50002, '2025-01-03', 'Cash', 'ID12347'),
-(50003, '2025-02-25', 'Gift card', 'ID12348'),
-(50004, '2024-11-10', 'Cash', 'ID12349'),
-(50005, '2024-12-30', 'Credit card', 'ID12350'),
-(50006, '2024-09-21', 'Credit card', 'ID12351'),
-(50007, '2025-03-03', 'Credit card', 'ID12352'),
-(50008, '2025-04-02', 'Gift card', 'ID12353'),
-(50009, '2024-05-01', 'Credit card', 'ID12354'),
-(50010, '2024-12-30', 'Credit card', 'ID12355'),
-(50011, '2025-01-12', 'Credit card', 'ID12356'),
-(50012, '2025-01-03', 'Cash', 'ID12357'),
-(50013, '2025-02-25', 'Gift card', 'ID12358'),
-(50014, '2024-11-10', 'Cash', 'ID12359'),
-(50015, '2024-12-30', 'Credit card', 'ID12360'),
-(50016, '2024-09-21', 'Credit card', 'ID12361'),
-(50017, '2024-07-17', 'Gift card', 'ID12362'),
-(50018, '2024-03-09', 'Gift card', 'ID12363'),
-(50019, '2024-01-02', 'Gift card', 'ID12364');
+(50000, '2024-12-30', 'Credit card', '40000'),
+(50001, '2025-01-12', 'Credit card', '40001'),
+(50002, '2025-01-03', 'Cash', '40002'),
+(50003, '2025-02-25', 'Gift card', '40003'),
+(50004, '2024-11-10', 'Cash', '40004'),
+(50005, '2024-12-30', 'Credit card', '40005'),
+(50006, '2024-09-21', 'Credit card', '40006'),
+(50007, '2025-03-03', 'Credit card', '40007'),
+(50008, '2025-04-02', 'Gift card', '40008'),
+(50009, '2024-05-01', 'Credit card', '40009'),
+(50010, '2024-12-30', 'Credit card', '40010'),
+(50011, '2025-01-12', 'Credit card', '40011'),
+(50012, '2025-01-03', 'Cash', '40012'),
+(50013, '2025-02-25', 'Gift card', '40013'),
+(50014, '2024-11-10', 'Cash', '40014'),
+(50015, '2024-12-30', 'Credit card', '40015'),
+(50016, '2024-09-21', 'Credit card', '40016'),
+(50017, '2024-07-17', 'Gift card', '40017'),
+(50018, '2024-03-09', 'Gift card', '40018'),
+(50019, '2024-01-02', 'Gift card', '40019');
 
 -- Biglietti
 INSERT INTO Biglietto (id_biglietto, id_prenotazione, id_volo, classe, posto, check_in_effettuato, prezzo, qr_code, stato) VALUES
