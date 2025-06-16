@@ -37,7 +37,6 @@ CREATE TABLE Prenotazione (
   id_prenotazione SERIAL PRIMARY KEY,
   data_prenotazione DATE NOT NULL,
   metodo_pagamento VARCHAR(50) NOT NULL,
-  totale_pagato DECIMAL(10,2) NOT NULL,
   id_passeggero INT REFERENCES Passeggero(id_passeggero)
 );
 
