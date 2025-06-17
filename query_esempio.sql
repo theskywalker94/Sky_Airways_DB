@@ -33,9 +33,10 @@ LEFT JOIN Biglietto b ON v.id_volo = b.id_volo
 WHERE v.data_partenza = '2025-12-24'
 GROUP BY v.numero_volo;
 
--- 5. Entrate da un volo -- correggere query, manca aggregazione su v.numero_volo
-SELECT v.numero_volo, SUM(b.prezzo) AS totale_incassi
-FROM Biglietto b
-JOIN Volo v ON b.id_volo = v.id_volo
+-- 5. Entrate da un volo
+SELECT v.numero_volo, COUNT(v.id_volo) AS totale_biglietti, SUM(b.prezzo) AS totale_incassi
+FROM Volo v
+JOIN Biglietto b ON b.id_volo = v.id_volo
 WHERE v.id_volo = 30009
-  AND b.stato = 'valido';
+  AND b.stato = 'valido'
+GROUP BY v.numero_volo;
