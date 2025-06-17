@@ -30,7 +30,7 @@ WHERE b.qr_code = 'QR00001'
 SELECT v.numero_volo, COUNT(DISTINCT b.id_biglietto) AS numero_passeggeri
 FROM Volo v
 LEFT JOIN Biglietto b ON v.id_volo = b.id_volo
-WHERE v.data_partenza = '2025-06-15'
+WHERE v.data_partenza = '2025-12-24'
 GROUP BY v.numero_volo;
 
 -- 5. Entrate da un volo -- correggere query, manca aggregazione su v.numero_volo
