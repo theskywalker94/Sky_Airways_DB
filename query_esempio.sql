@@ -7,7 +7,7 @@ JOIN Tratta t ON v.id_tratta = t.id_tratta
 JOIN Aeroporto a1 ON t.aeroporto_partenza = a1.id_aeroporto
 JOIN Aeroporto a2 ON t.aeroporto_arrivo = a2.id_aeroporto
 WHERE a1.codice_IATA = 'MXP' AND a2.codice_IATA = 'HND'
-  AND v.data_partenza = '2025-06-18'
+  AND v.data_partenza = '2025-12-24'
   AND v.stato = 'programmato';
 
 -- 2. Storico prenotazioni
