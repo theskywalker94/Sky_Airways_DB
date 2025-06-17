@@ -11,7 +11,7 @@ WHERE a1.codice_IATA = 'MXP' AND a2.codice_IATA = 'HND'
   AND v.stato = 'programmato';
 
 -- 2. Storico prenotazioni
-SELECT p.id_prenotazione, p.data_prenotazione, p.stato, v.numero_volo, v.data_partenza
+SELECT p.id_prenotazione, p.data_prenotazione, b.stato, v.numero_volo, v.data_partenza
 FROM Prenotazione p
 JOIN Biglietto b ON p.id_prenotazione = b.id_prenotazione
 JOIN Volo v ON b.id_volo = v.id_volo
