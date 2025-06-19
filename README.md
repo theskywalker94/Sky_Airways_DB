@@ -55,9 +55,9 @@ Il file include dati per le seguenti tabelle:
 - `Aeroporto` – 10 record
 - `Tratta` – 10 record
 - `Volo` – 10 record
-- `Passeggero` – 10 record
-- `Prenotazione` – 10 record
-- `Biglietto` – 10 record
+- `Passeggero` – 20 record
+- `Prenotazione` – 20 record
+- `Biglietto` – 20 record
 
 ## Licenza
 
