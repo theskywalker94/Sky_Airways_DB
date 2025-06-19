@@ -28,16 +28,16 @@ INSERT INTO Tratta (id_tratta, aeroporto_partenza, aeroporto_arrivo, durata_prev
 
 -- Voli
 INSERT INTO Volo (id_volo, id_tratta, data_partenza, ora_partenza, numero_volo, stato, modello) VALUES
-(30000, 20002, '2025-08-15', '10:00:00', 'SK1001', 'programmato', 'B787'),
+(30000, 20002, '2025-08-15', '10:00:00', 'SK1001', 'programmato', 'A320neo'),
 (30001, 20007, '2025-07-16', '11:00:00', 'SK1002', 'programmato', 'B787'),
 (30002, 20002, '2025-06-07', '12:00:00', 'SK1003', 'completato', 'A320neo'),
-(30003, 20000, '2025-12-24', '13:00:00', 'SK1004', 'programmato', 'A320neo'),
+(30003, 20000, '2025-12-24', '13:00:00', 'SK1004', 'programmato', 'B787'),
 (30004, 20009, '2025-09-19', '14:00:00', 'SK1005', 'cancellato', 'B787'),
-(30005, 20001, '2025-06-20', '15:00:00', 'SK1006', 'completato', 'B787'),
-(30006, 20004, '2025-08-21', '16:00:00', 'SK1007', 'programmato', 'B787'),
+(30005, 20001, '2025-06-20', '15:00:00', 'SK1006', 'completato', 'A320neo'),
+(30006, 20004, '2025-08-21', '16:00:00', 'SK1007', 'programmato', 'A320neo'),
 (30007, 20008, '2025-06-22', '17:00:00', 'SK1008', 'cancellato', 'A320neo'),
 (30008, 20003, '2025-11-23', '18:00:00', 'SK1009', 'programmato', 'A320neo'),
-(30009, 20005, '2025-12-24', '19:00:00', 'SK1010', 'programmato', 'B787');
+(30009, 20005, '2025-12-24', '19:00:00', 'SK1010', 'programmato', 'A320neo');
 
 -- Passeggeri
 INSERT INTO Passeggero (id_passeggero, nome, cognome, email, telefono, documento_identita) VALUES
