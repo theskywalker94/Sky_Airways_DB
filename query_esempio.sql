@@ -15,7 +15,7 @@ SELECT p.id_prenotazione, p.data_prenotazione, b.stato, v.numero_volo, v.data_pa
 FROM Prenotazione p
 JOIN Biglietto b ON p.id_prenotazione = b.id_prenotazione
 JOIN Volo v ON b.id_volo = v.id_volo
-WHERE p.id_passeggero = '40017'
+WHERE p.id_passeggero = 40017
 ORDER BY p.data_prenotazione DESC;
 
 -- 3. Verifica validità biglietto
