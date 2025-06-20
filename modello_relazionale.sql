@@ -21,7 +21,7 @@ CREATE TABLE Volo (
   data_partenza DATE NOT NULL,
   ora_partenza TIME NOT NULL,
   numero_volo VARCHAR(10) NOT NULL,
-  stato VARCHAR(50) CHECK (stato IN ('programmato', 'cancellato', 'completato'))
+  stato VARCHAR(50) CHECK (stato IN ('programmato', 'cancellato', 'completato')),
   modello VARCHAR(10) CHECK (modello IN ('B787', 'A320neo'))
 );
 
