@@ -108,4 +108,4 @@ Per eseguire le query d'esempio, copia il contenuto del file `query_esempio.sql`
 
 ## Licenza
 
-Questo dump è a scopo didattico e simulativo. Nessun dato reale è stato utilizzato.
+Questo dump è a scopo didattico e simulativo.
