@@ -49,6 +49,6 @@ CREATE TABLE Biglietto (
   posto VARCHAR(5) NOT NULL,
   check_in_effettuato BOOLEAN DEFAULT FALSE,
   prezzo DECIMAL (10,2) NOT NULL,
-  qr_code VARCHAR(20) UNIQUE,
+  qr_code VARCHAR(20) UNIQUE NOT NULL,
   stato VARCHAR(20) CHECK (stato IN ('valido', 'annullato', 'utilizzato'))
 );
