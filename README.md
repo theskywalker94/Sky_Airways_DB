@@ -58,6 +58,13 @@ Copia il contenuto del file `dump_database.sql` e incollalo nella sezione Query,
 ![5th step](https://github.com/user-attachments/assets/70d95dea-8ca7-46f2-adf2-2172a845ad65)
 
 
+### 5. Creare gli indici
+
+Copia il contenuto del file e incollalo nella sezione Query, quindi clicca su "Execute Script" (o digita F5):
+
+![index](https://github.com/user-attachments/assets/a4779d3d-e00c-4f22-b169-e036a3b20c0b)
+
+
 ## Contenuto del Dump
 
 Il file include dati per le seguenti tabelle:
