@@ -60,7 +60,7 @@ Copia il contenuto del file `dump_database.sql` e incollalo nella sezione Query,
 
 ### 5. Creare gli indici
 
-Copia il contenuto del file e incollalo nella sezione Query, quindi clicca su "Execute Script" (o digita F5):
+Copia il contenuto del file `vincoli_e_indici.sql` e incollalo nella sezione Query, quindi clicca su "Execute Script" (o digita F5):
 
 ![index](https://github.com/user-attachments/assets/a4779d3d-e00c-4f22-b169-e036a3b20c0b)
 
