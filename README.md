@@ -88,7 +88,7 @@ Per eseguire le query d'esempio, copia il contenuto del file `query_esempio.sql`
 
 ### Esempio n.2
 
-![example_2](https://github.com/user-attachments/assets/c22efbe1-df5a-46ca-bc5d-6b67c276c79a)
+![example_2](https://github.com/user-attachments/assets/c343ece4-bf7e-4ff5-b023-cbd1af862381)
 
 
 ### Esempio n.3
