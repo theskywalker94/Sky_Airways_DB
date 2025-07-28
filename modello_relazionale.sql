@@ -10,7 +10,7 @@ CREATE TABLE Aeroporto (
 CREATE TABLE Tratta (
   id_tratta SERIAL PRIMARY KEY,
   aeroporto_partenza CHAR(3) REFERENCES Aeroporto(id_aeroporto),
-  aeroporto_arrivo CHAR(3) REFERENCES Aeroporto(id_aeroporto),
+  aeroporto_arrivo CHAR(3) REFERENCES Aeroporto(id_aeroporto)
 );
 
 CREATE TABLE Volo (
