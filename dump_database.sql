@@ -1,7 +1,7 @@
 -- dump_database.sql
 
 -- Aeroporti
-INSERT INTO Aeroporto (id_aeroporto, nome, citta, paese, codice_IATA) VALUES
+INSERT INTO Aeroporto (id_aeroporto, nome, citta, paese) VALUES
 (10000, 'Milano Malpensa', 'Milano', 'Italy', 'MXP'),
 (10001, 'Roma Fiumicino', 'Roma', 'Italy', 'FCO'),
 (10002, 'Bari Karol Wojtyla', 'Bari', 'Italy', 'BRI'),
@@ -14,7 +14,7 @@ INSERT INTO Aeroporto (id_aeroporto, nome, citta, paese, codice_IATA) VALUES
 (10009, 'Bangkok Suvarnabuhmi', 'Bangkok', 'Thailand', 'BKK');
 
 -- Tratte
-INSERT INTO Tratta (id_tratta, aeroporto_partenza, aeroporto_arrivo, durata_prevista) VALUES
+INSERT INTO Tratta (id_tratta, aeroporto_partenza, aeroporto_arrivo) VALUES
 (20000, 10000, 10008, '12:39:00'),
 (20001, 10001, 10009, '10:50:00'),
 (20002, 10002, 10003, '01:25:00'),
