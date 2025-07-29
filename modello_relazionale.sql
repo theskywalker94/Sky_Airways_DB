@@ -8,9 +8,19 @@ CREATE TABLE Aeroporto (
 );
 
 CREATE TABLE Tratta (
-  id_tratta VARCHAR(6) PRIMARY KEY,
-  aeroporto_partenza CHAR(3) REFERENCES Aeroporto(id_aeroporto),
-  aeroporto_arrivo CHAR(3) REFERENCES Aeroporto(id_aeroporto)
+  id_tratta INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  origin CHAR(3) REFERENCES Aeroporto(id_aeroporto),
+  destination CHAR(3) REFERENCES Aeroporto(id_aeroporto),
+  data_partenza DATE NOT NULL,
+  data_arrivo DATE NOT NULL,
+  ora_partenza TIME NOT NULL,
+  ora_arrivo TIME NOT NULL,
+  str_path VARCHAR(1000),
+  root CHAR(3) REFERENCES Aeroporto(id_aeroporto),
+  root_partenza DATE NOT NULL,
+  root_orario TIME NOT NULL,
+  scali INT,
+  str_flight VARCHAR(1000)
 );
 
 CREATE TABLE Volo (
