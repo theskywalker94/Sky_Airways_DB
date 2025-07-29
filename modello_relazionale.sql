@@ -14,9 +14,9 @@ CREATE TABLE Tratta (
 );
 
 CREATE TABLE Volo (
-  id_volo VARCHAR(6) PRIMARY KEY,
-  aeroporto_partenza CHAR(3) REFERENCES Aeroporto(id_aeroporto),
-  aeroporto_arrivo CHAR(3) REFERENCES Aeroporto(id_aeroporto),
+  id_volo VARCHAR(7) PRIMARY KEY,
+  origin CHAR(3) REFERENCES Aeroporto(id_aeroporto),
+  destination CHAR(3) REFERENCES Aeroporto(id_aeroporto),
   data_partenza DATE NOT NULL,
   ora_partenza TIME NOT NULL,
   data_arrivo DATE NOT NULL,
