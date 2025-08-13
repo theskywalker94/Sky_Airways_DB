@@ -10,7 +10,7 @@ Il lavoro fornisce un’applicazione concreta delle competenze acquisite nel per
 
 # Sky Airways – Esempio di Dump Database PostgreSQL
 
-Questo progetto contiene un file SQL (`dump_database.sql`) con i dati di esempio relativi alla gestione del sistema di prenotazione voli per una compagnia aerea.
+Questo progetto contiene diversi file SQL con i dati di esempio relativi alla gestione del sistema di prenotazione voli per una compagnia aerea.
 
 ## Requisiti
 
@@ -22,64 +22,56 @@ Questo progetto contiene un file SQL (`dump_database.sql`) con i dati di esempio
 
 ### 1. Creare un nuovo database
 
-Apri l'interfaccia pgAdmin 4, seleziona Query Tool Workspace nel menu sulla sinistra e collegati al server default selezionando il database "postgres":
+Aprire l'interfaccia pgAdmin 4, selezionare Query Tool Workspace nel menu sulla sinistra e collegarsi al server default selezionando il database "postgres":
 
 ![1st step](https://github.com/user-attachments/assets/83178586-9b7e-42fd-87e9-5564082697a0)
 
-Nella sezione Query, digita l'istruzione:
+Nella sezione Query, digitare l'istruzione:
 
 ```sql
 CREATE DATABASE sky_airways
 ```
 
-quindi clicca su "Execute Script" (o digita F5):
+quindi cliccare su "Execute Script" (o digitare F5):
 
 ![2nd step](https://github.com/user-attachments/assets/6ac3cb3a-8d8f-4e09-b749-ecd875031f3d)
 
 
 ### 2. Collegarsi al nuovo database
 
-Ritorna nella schermata principale del Query Tool Workspace, tuttavia questa volta seleziona il nuovo database "sky_airways":
+Ritornare nella schermata principale del Query Tool Workspace e selezionare il nuovo database "sky_airways":
 
 ![3rd step](https://github.com/user-attachments/assets/2e0986c4-e774-4b5f-81ce-199b808e2e1d)
 
 
-### 3. Creazione di tabelle
+### 3. Creazione di tabelle, definizione di indici e vincoli
 
-Copia il contenuto del file `modello_relazionale.sql` e incollalo nella sezione Query, quindi clicca su "Execute Script" (o digita F5):
+Aprire il file `creazione_tabelle.sql` tramite pulsante "Open File" oppure copiarne il contenuto e incollarlo nella sezione Query, quindi cliccare su "Execute Script" (o digitare F5):
 
 ![4th step](https://github.com/user-attachments/assets/2868f419-fd96-4f2d-a21c-be41b5bc25bd)
 
 
 ### 4. Popolare il database
 
-Copia il contenuto del file `dump_database.sql` e incollalo nella sezione Query, quindi clicca su "Execute Script" (o digita F5):
+Aprire il file `inserimento_valori.sql` tramite pulsante "Open File" oppure copiarne il contenuto e incollarlo nella sezione Query, quindi cliccare su "Execute Script" (o digitare F5):
 
 ![5th step](https://github.com/user-attachments/assets/70d95dea-8ca7-46f2-adf2-2172a845ad65)
-
-
-### 5. Creare gli indici
-
-Copia il contenuto del file `vincoli_e_indici.sql` e incollalo nella sezione Query, quindi clicca su "Execute Script" (o digita F5):
-
-![index](https://github.com/user-attachments/assets/a4779d3d-e00c-4f22-b169-e036a3b20c0b)
 
 
 ## Contenuto del Dump
 
 Il file include dati per le seguenti tabelle:
 
-- `Aeroporto` – 10 record
-- `Tratta` – 10 record
-- `Volo` – 10 record
-- `Passeggero` – 20 record
-- `Prenotazione` – 20 record
-- `Biglietto` – 20 record
+- `Volo` – 726 record
+- `Volo_reale` – 34.848 record
+- `Passeggero` – 250.000 record
+- `Prenotazione` – 525.017 record
+- `Biglietto` – 1.051.556 record
 
 
 ## Query d'esempio
 
-Per eseguire le query d'esempio, copia il contenuto del file `query_esempio.sql` (considerando una singola query per volta) e incollalo nella sezione Query, quindi clicca su "Execute Script" (o digita F5).
+Per eseguire le query d'esempio, è possibile aprire i singoli file .sql tramite pulsante "Open File" oppure copiare il loro contenuto (considerando una singola query per volta) e incollarlo nella sezione Query, quindi cliccare su "Execute Script" (o digita F5).
 
 ### Esempio n.1
 
