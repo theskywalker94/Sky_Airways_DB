@@ -1,4 +1,5 @@
 -- Query d'esempio n.1
+-- Ricerca di voli diretti e/o con scalo, l'utente seleziona l'aeroporto di partenza e destinazione e la data desiderata
 
 WITH RECURSIVE cte AS (
     -- ANCHOR MEMBER: primo volo diretto da MXP
