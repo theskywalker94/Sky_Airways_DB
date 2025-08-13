@@ -1,3 +1,4 @@
+-- Query d'esempio n.2
 -- Mostra tutte le prenotazioni effettuate da un passeggero specifico
 
 SELECT
