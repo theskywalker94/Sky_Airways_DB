@@ -1,0 +1,64 @@
+// diagramma_classi.dbml (dbdiagram.io)
+
+Table Volo {
+  id_volo varchar(6) [pk, not null]
+  partenza char(3) [not null] //foreign key
+  destinazione char(3) [not null] //foreign key
+  ora_partenza time [not null]
+  ora_arrivo time [not null]
+  modello varchar(7) [not null, note: 'CHECK (modello IN (B787, A320neo))']
+  indexes {
+    (partenza, ora_partenza)
+  }
+}
+
+Table Volo_reale {
+  "id_volo, data_partenza" "varchar(6) date" [pk, not null]
+  data_arrivo date [not null]
+  stato varchar(11) [not null, note: 'CHECK (stato IN (programmato, cancellato, completato))']
+  indexes {
+    ("id_volo, data_partenza")
+  }
+}
+
+Table Biglietto {
+  id_biglietto varchar(10) [pk, not null]
+  "id_volo, data_partenza" "varchar(6) date" [not null]
+  posto varchar(4) [not null]
+  classe varchar(8) [not null, note: 'CHECK (classe IN(business, economy))']
+  id_passeggero varchar(10) [not null]
+  id_prenotazione varchar(11) [not null]
+  prezzo decimal [not null]
+  validità varchar(10) [not null, note: 'CHECK (stato IN (valido, annullato, utilizzato))']
+  indexes {
+    ("id_volo, data_partenza")
+  }
+}
+
+Table Prenotazione {
+  id_prenotazione varchar(11) [pk, not null]
+  id_passeggero varchar(10) [not null]
+  data_prenotazione date [not null]
+  metodo_pagamento varchar(11) [note: 'CHECK (metodo_pagamento IN (credit card, cash, gift card))']
+  indexes {
+    (id_passeggero, data_prenotazione)
+  }
+}
+
+Table Passeggero {
+  id_passeggero varchar(10) [pk, not null]
+  nome varchar(100) [not null]
+  cognome varchar(100) [not null]
+  data_nascita date [not null]
+  email varchar(200) [not null, unique]
+  telefono varchar(50) [null]
+  indexes {
+    (email)
+  }
+}
+
+Ref Occorrenza: Volo_reale."id_volo, data_partenza" > Volo.id_volo // Biglietto(1:1) - Volo(0:N)
+Ref Prenota: Biglietto."id_volo, data_partenza" > Volo_reale."id_volo, data_partenza" // Biglietto(1:1) - Volo(0:N)
+Ref Possiede: Passeggero.id_passeggero < Biglietto.id_passeggero // Passeggero(0:N) - Biglietto(1:1)
+Ref Include: Prenotazione.id_prenotazione < Biglietto.id_prenotazione // Prenotazione(1:N) - Biglietto(1:1)
+Ref Effettua: Passeggero.id_passeggero < Prenotazione.id_passeggero // Passeggero(0:N) - Prenotazione(0:1)
