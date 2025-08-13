@@ -1,5 +1,5 @@
 -- Query d'esempio n.1
--- Ricerca di voli diretti e/o con scalo, l'utente seleziona l'aeroporto di partenza e destinazione e la data desiderata
+-- Ricerca di voli diretti e/o con scalo da Milano Malpensa MXP a Tokyo Narita NRT con partenza in data 10-12-2025
 
 WITH RECURSIVE cte AS (
     -- ANCHOR MEMBER: primo volo diretto da MXP
@@ -20,7 +20,7 @@ WITH RECURSIVE cte AS (
     FROM Volo v
     JOIN Volo_reale r
       ON v.id_volo = r.id_volo
-    WHERE v.partenza = 'MXP' -- aeroporto di partenza iniziale
+    WHERE v.partenza = 'MXP' -- aeroporto di partenza iniziale: Milano Malpensa
 	AND r.stato = 'programmato'
 
     UNION ALL
@@ -64,6 +64,6 @@ SELECT DISTINCT ON (origine_partenza, orario_partenza, str_flight)
        data_arrivo AS Data_Arrivo,
        ora_arrivo AS Orario_Arrivo
 FROM cte
-WHERE destinazione = 'NRT' -- destinazione finale
-AND origine_partenza = '2025-12-10'
+WHERE destinazione = 'NRT' -- destinazione finale: Tokyo Narita
+AND origine_partenza = '2025-12-10' -- data di partenza desiderata
 ORDER BY origine_partenza, orario_partenza, str_flight, numero_scali, data_partenza, orario_partenza;
