@@ -1,3 +1,4 @@
+-- Query d'esempio n.3
 -- Controlla la validità dei biglietti per un volo specifico
 
 SELECT
