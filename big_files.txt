@@ -1,0 +1,15 @@
+PER POPOLARE IL DATABASE IN POSTGRESQL:
+
+inserimento_valori.sql: https://1drv.ms/u/c/4a2c65f17f79a5a2/ESR1E8UZPmBCuKjlol_8zHEBDoAU_PJUe3_Gh6BmG8wWgw?e=H2Qeby
+
+LISTA DI FILE UTILIZZATI IN TANDEM CON PYTHON TROPPO GRANDI PER GITHUB:
+
+ticket_list.txt - https://1drv.ms/t/c/4a2c65f17f79a5a2/EXO7V4i9-uxDu3fCcf0pcpoBy5wNBbbulR-GHLrVmJxobg?e=wAy1QW
+ticket_list_converted_FINAL.txt - https://1drv.ms/t/c/4a2c65f17f79a5a2/EXGQoPc4OnlCjSDcde4eayABD1SNu4DU33IOfNKR6abg0w?e=qIusLd
+ticket_list_FINAL.txt - https://1drv.ms/t/c/4a2c65f17f79a5a2/EWGnqJ-IxgRGsLEBrWJ3nqsB1WWbS8toDMpZSlUZnZNH-w?e=vnLOJa
+booking_list.txt - https://1drv.ms/t/c/4a2c65f17f79a5a2/Eakr0l0ZodJGkpVLiR_lmYUBAxm69OV175cBys0BalpCDw?e=XTACQw
+booking_list_converted_FINAL.txt - https://1drv.ms/t/c/4a2c65f17f79a5a2/EabssJBp02pBgbCKGy8pSfUBPLXjlFp7zyM_NcMeXujY-w?e=9e4Ltx
+booking_list_FINAL.txt - https://1drv.ms/t/c/4a2c65f17f79a5a2/EVnVU0Xb52NMlXvQKjipU4IBNDcoQHKIsNR1Qe95ETJVzg?e=oQe9GD
+
+N.B. TUTTI I LINKS SCADONO IN DATA 31/12/2025.
+
