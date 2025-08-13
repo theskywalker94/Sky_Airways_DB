@@ -1,3 +1,4 @@
+-- Query d'esempio n.5
 -- Calcola il totale delle entrate per un volo specifico
 
 SELECT
