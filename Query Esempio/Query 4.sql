@@ -1,3 +1,4 @@
+-- Query d'esempio n.4
 -- Report sul numero di passeggeri di tutti i voli in partenza in una singola giornata
 
 SELECT
