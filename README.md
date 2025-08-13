@@ -53,7 +53,7 @@ Aprire il file `creazione_tabelle.sql` tramite pulsante "Open File" oppure copia
 
 ### 4. Popolare il database
 
-Aprire il file `inserimento_valori.txt` e scaricare il file `inserimento_valori.sql` tramite il link OneDrive condiviso al suo interno. Una volta completato il download, aprire il file `inserimento_valori.sql` tramite pulsante "Open File" in pgAdmin 4 oppure copiarne il contenuto e incollarlo nella sezione Query, quindi cliccare su "Execute Script" (o digitare F5):
+Aprire il file `big_files.txt` e scaricare il file `inserimento_valori.sql` tramite il link OneDrive condiviso al suo interno. Una volta completato il download, aprire il file `inserimento_valori.sql` tramite pulsante "Open File" in pgAdmin 4 oppure copiarne il contenuto e incollarlo nella sezione Query, quindi cliccare su "Execute Script" (o digitare F5):
 
 ![5th step](https://github.com/user-attachments/assets/70d95dea-8ca7-46f2-adf2-2172a845ad65)
 
