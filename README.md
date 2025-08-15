@@ -48,7 +48,7 @@ Ritornare nella schermata principale del Query Tool Workspace e selezionare il n
 
 Aprire il file `creazione_tabelle.sql` tramite pulsante "Open File" oppure copiarne il contenuto e incollarlo nella sezione Query, quindi cliccare su "Execute Script" (o digitare F5):
 
-![4th step](https://github.com/user-attachments/assets/2868f419-fd96-4f2d-a21c-be41b5bc25bd)
+<img width="1780" height="1800" alt="image" src="https://github.com/user-attachments/assets/c085247f-02d1-4fe9-b119-b09bdef67670" />
 
 
 ### 4. Popolare il database
