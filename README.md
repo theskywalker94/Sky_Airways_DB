@@ -1,16 +1,6 @@
-# Sky Airways - Introduzione
+# Sky Airways – Introduzione al database in PostgreSQL
 
-Il presente project work ha come obiettivo la progettazione di un sistema di persistenza dei dati a supporto dei servizi di una compagnia aerea simulata, denominata Sky Airways. Il lavoro nasce dall’esigenza di gestire in modo efficiente e coerente il processo di vendita dei biglietti, considerando le complessità tipiche del trasporto aereo, come voli con scali, prenotazioni multiple e gestione dei passeggeri.
-
-Il progetto si articola in diverse fasi: analisi del contesto normativo e operativo del settore, modellazione concettuale tramite diagramma entità-relazione (ER), traduzione in modello relazionale, normalizzazione fino alla Terza Forma Normale, definizione di indici per l’ottimizzazione delle query e implementazione di interrogazioni SQL rappresentative. È stato scelto il DBMS PostgreSQL per la sua affidabilità, compatibilità e diffusione in ambito professionale.
-
-Il sistema risultante è scalabile, normalizzato e adatto all’integrazione con altri strumenti informativi aziendali. L’elaborato è stato completato con la realizzazione di un dump SQL con dati realistici e la pubblicazione del progetto su GitHub.
-
-Il lavoro fornisce un’applicazione concreta delle competenze acquisite nel percorso accademico e rappresenta una solida base per l’implementazione di sistemi informativi nel settore dei trasporti.
-
-# Sky Airways – Esempio di Dump Database PostgreSQL
-
-Questo progetto contiene diversi file SQL con i dati di esempio relativi alla gestione del sistema di prenotazione voli per una compagnia aerea.
+In questo Project Work è stato analizzato e progettato un database relazionale per una compagnia aerea fittizia denominata "Sky Airways". Il DBMS scelto per le finalità del progetto è PostgreSQL e nella sezione successiva sarà spiegato passo dopo passo come creare un nuovo database e popolarlo in base ai file .sql presenti in questa repository.
 
 ## Requisiti
 
