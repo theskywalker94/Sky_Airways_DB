@@ -55,7 +55,7 @@ Aprire il file `creazione_tabelle.sql` tramite pulsante "Open File" oppure copia
 
 Scaricare il file `inserimento_valori.sql` tramite il link OneDrive condiviso: https://1drv.ms/u/c/4a2c65f17f79a5a2/ESR1E8UZPmBCuKjlol_8zHEBDoAU_PJUe3_Gh6BmG8wWgw?e=H2Qeby. Una volta completato il download, aprire il file `inserimento_valori.sql` tramite pulsante "Open File" in pgAdmin 4, quindi cliccare su "Execute Script" (o digitare F5):
 
-![5th step](https://github.com/user-attachments/assets/70d95dea-8ca7-46f2-adf2-2172a845ad65)
+<img width="1840" height="1800" alt="image" src="https://github.com/user-attachments/assets/49c32f70-7210-4724-a816-49158fcb7c26" />
 
 
 ## Contenuto del Dump
@@ -71,31 +71,31 @@ Il file include dati per le seguenti tabelle:
 
 ## Query d'esempio
 
-Per eseguire le query d'esempio, è possibile aprire i singoli file .sql tramite pulsante "Open File" oppure copiare il loro contenuto (considerando una singola query per volta) e incollarlo nella sezione Query, quindi cliccare su "Execute Script" (o digita F5).
+Per eseguire le query d'esempio, è possibile aprire i singoli file .sql tramite pulsante "Open File" oppure copiare il loro contenuto e incollarlo nella sezione Query, quindi cliccare su "Execute Script" (o digita F5).
 
 ### Esempio n.1
 
-![example_1](https://github.com/user-attachments/assets/ce2912e9-5b44-48a3-9ec0-1bc1501fc3b6)
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/c41840bc-768b-42b5-8b74-f3345a4af8ab" />
 
 
 ### Esempio n.2
 
-![example_2](https://github.com/user-attachments/assets/c343ece4-bf7e-4ff5-b023-cbd1af862381)
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/80485209-70a2-41a1-9d83-c35e88576bfb" />
 
 
 ### Esempio n.3
 
-![example_3](https://github.com/user-attachments/assets/6aeeae06-03e4-4a01-8152-ca6be49ec2ed)
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/cbf84e09-baa6-474c-b0b4-2419c206fef2" />
 
 
 ### Esempio n.4
 
-![example_4](https://github.com/user-attachments/assets/7e964a30-d714-4c43-b087-99f57dafe61a)
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/ece761e7-881a-410a-ba22-3fbc3b4d10e0" />
 
 
 ### Esempio n.5
 
-![example_5](https://github.com/user-attachments/assets/3b5913d3-70cf-4314-9059-b6b217df9b90)
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/686a733e-67f1-47f4-9c8b-851756d4f6f8" />
 
 
 ## Licenza
