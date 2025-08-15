@@ -90,4 +90,4 @@ Per eseguire le query d'esempio, è possibile aprire i singoli file .sql tramite
 
 ## Licenza
 
-Questo dump è a scopo didattico e simulativo.
+Questo dump è a scopo didattico e simulativo. Ogni riferimento a persone esistenti è puramente casuale.
